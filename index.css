@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&family=Edu+TAS+Beginner&family=Ephesis&family=Foldit:wght@500&family=M+PLUS+Code+Latin:wght@300&family=PT+Sans:ital@1&family=Quicksand&family=Sometype+Mono:ital@1&display=swap');
+*{
+    padding: 0px;
+    margin: 0px;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow:hidden;
+}
+#background{
+    width:100%;
+    height:100%;
+    background-color: white;
+    position: fixed;
+    top: 0px;
+    left:0px;
+}
+.circle{
+    width: 10vw;
+    height: 10vw;
+    background-color: violet;
+    border-radius: 100%;
+    animation-name:circleAnimation;
+    animation-iteration-count:infinite;
+    filter: blur(10px);
+}
+#cir1{
+    animation-delay: 0.5s;
+    animation-direction: alternate-reverse;
+    animation-duration: 20s;
+    transform: translate(45vw,30vw);
+    background-image: linear-gradient(75deg,red,pink,blue,lawngreen,green,olive);
+    background-size: 1500px;
+    background-position: 1500px;
+}
+#cir2{
+    animation-delay: 0.5s;
+    animation-direction: alternate;
+    animation-fill-mode: both;
+    animation-timing-function:ease-out;
+    animation-duration: 30s;
+    transform: translate(0vw,30vw);
+    background-image: linear-gradient(75deg,rgb(34, 0, 255),brown,rgb(233, 78, 26),yellow,aqua,red);
+    background-size: 1500px;
+    background-position: 1500px;
+}
+#cir3{
+    animation: 1s;
+    animation-duration: 30s;
+    transform: translate(30vw,0vw);
+    background-image: linear-gradient(75deg,navy,violet,darkgreen,brown,red,magenta);
+    background-size: 1500px;
+    background-position: 1500px;
+}
+@keyframes circleAnimation {
+    0%,100%{
+        transform: translate(0vw,0vw) scale(1.5);
+        background-position: 1500px;
+        
+    }
+    10%{
+        transform: translate(80vw,vw) scale(1.1);
+    }
+    20%{
+        transform: translate(-0vw,40vw) scale(2);
+    }
+    30%{
+        transform: translate(80vw,00vw);
+    }
+    40%{
+        transform: translate(20vw,20vw);
+    }
+    60%{
+        transform: translate(40vw,20vw) scale(1);
+    }
+    80%{
+        transform: translate(40vw,40vw);
+    }
+    90%{
+        transform: translate(70vw,00vw) scale(1.3);
+        background-position: 0px;
+    }
+}
+#loginpagelayout{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0px;
+    display: flex;
+}
+#rightDiv{
+    width: 50%;
+    height: 100%; 
+}
+#leftdiv{
+    width:50%;
+    height:100vh;
+    /* background-color: black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 1vw;
+}
+#rightTopDiv{
+    width: 100%;
+    height: 60%;
+    /* background-color: black; */
+    float: right;
+    display: flex;
+    align-items:end;
+    justify-content: space-evenly;
+}
+#rightBottomDiv{
+    width: 100%;
+    height: 40%;
+    border: 2px soild lawngreen;
+    display: flex;
+    justify-content:center;
+    padding-top: 2vw;
+}
+.headingText{
+    font-size: 60px;
+    text-transform: capitalize;
+    text-shadow: 2px 2px 5px black;
+    font-family: 'Foldit',sans-serif;
+    animation-name:textAnimation;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-direction: alternate;
+}
+#text_l,#text_i,#text_e{
+    animation-delay:0.5s;
+    animation-duration:2s;
+}
+#text_o,#text_n{
+    animation-delay:0s;
+    animation-duration:6s;
+}
+#text_g,#text_p{
+    animation-delay:1s;
+    animation-duration:3s;
+}
+#text_a{
+    animation-delay: 0.7s;
+    animation-duration: 4s;
+}
+@keyframes textAnimation{
+    0%{
+        transform: translate(0px,-80vh);
+    }
+    20%{
+        transform: rotate(-10deg) rotateY(180deg);
+    }
+    40%{
+        transform: rotateY(0deg);
+    }
+    60%{
+        transform: translate3d(0px,0vh) rotate(20deg);
+    }
+    65%{
+        transform: translate3d(0px,0vh) rotate(20deg);
+    }
+    75%{
+        transform: rotateY(360deg) scale(1.3);
+    }
+    80%,84%,88%,92%,96%{
+        transform: rotate(5deg);
+    }
+    82%,86%,90%,94%,98%{
+        transform: rotate(-5deg);
+    }
+}
+#signUppage{
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1vw;
+    text-decoration: none;
+    background-image: linear-gradient(75deg,rgb(34, 0, 255),brown,rgb(233, 78, 26),yellow,aqua,red);
+    background-size: 2000px;
+    background-position: 2000px;
+    animation: textColanimation 10s infinite both alternate;
+    color: transparent;
+    -webkit-background-clip: text;
+}
+@keyframes textColanimation {
+   from{
+    background-position: 2000px;
+   } 
+   to{
+    background-position:0px;
+   }
+}
+.login_circle{
+    width: 10vw;
+    height: 10vw;
+    background-color: black;
+    border-radius:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 5vw;
+    animation: bubbleAnimation 10s infinite alternate;
+    box-shadow:5px 5px 5px black;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+@keyframes bubbleAnimation {
+    0%,100%{
+        border-radius: 100%;
+    }
+    30%,70%{
+        border-radius:64% 36% 44% 56% / 30% 47% 53% 70%;
+    }
+    20%,60%{
+        border: 26% 74% 76% 24% / 54% 36% 64% 46%;
+    }
+    40%,80%{
+        border-radius: 65% 35% 76% 24% / 54% 59% 41% 46%;
+    }
+}
+.login_circle:hover{
+    animation: none;
+    width:95%;
+    border-radius: 50px 0px 0px 50px;
+    justify-content: space-evenly;
+}
+.inp{
+    display: none;
+}
+.login_circle:hover>.inp{
+    display: block;
+}
+input{
+    width: 70%;
+    height:5vw;
+    font-size:24px;
+    text-align: center;
+    background-color: transparent;
+    color: white;
+    border: none;
+    border-bottom: 2px soild white;
+    outline: none;
+
+}
+input::placeholder{
+    color: yellow;
+
+}
+#inpButton{
+    background-color: royalblue;
+    border: none;
+    border-radius:20px;
+    cursor: pointer;
+}
